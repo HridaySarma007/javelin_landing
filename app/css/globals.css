@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+@import 'utility-patterns.css';
+@import 'range-slider.css';
+@import 'toggle-switch.css';
+@import 'theme.css';
+@import 'glassmorphic_card.css';
+@import 'login.css';
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255; /* Set background color to white */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 255, 255, 255; /* Set background color to white even in dark mode */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb)); /* Set background to white */
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+

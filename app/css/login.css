@@ -1,0 +1,251 @@
+
+.login-main{
+    display: flex;
+  }
+  
+  .login-left{
+    flex-grow: 1;
+    height: 100vh;
+    background-color: #E9E9E9;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login_image{
+    width:100%;
+    border-radius:8px;
+    }
+  
+
+  .login-left div{
+    display: flex;
+    width:90%;
+    justify-content: center;
+    box-shadow: 10px 10px rgb(var(--foreground-rgb));
+    border-radius:8px;
+  }
+  
+ 
+  
+  .login-right{
+    height: 100vh;
+    width:50%;
+    flex-grow: 1;
+  }
+  
+  .login-right-container{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  
+  .login-right form{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-logo{
+    align-self: center;
+    padding-top: 120px;
+  }
+  
+  .login-center{
+    margin: auto 0;
+  }
+  
+  .login-logo img{
+    width: 150px;
+    border-radius:32px;
+    height:150px;
+  }
+  
+  .login-center h2{
+    font-size: 2rem;
+  }
+  
+  .login-center{
+    text-align: center;
+  }
+  
+  .login-center p{
+    font-weight: 400;
+    font-size: rem;
+    margin-bottom: 40px;
+  }
+  
+  /* form input[type='phone'],
+  form input[type='text']
+   {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius:16px;
+    border-bottom: 1px solid black;
+    outline: none;
+    color:black;
+    box-sizing: border-box;
+  } */
+
+  .input-box {
+    display: flex; 
+    align-items: center; 
+    background: #CCC; 
+    border-radius:8px;
+    width:60%;
+    padding-left: 0.5rem;
+    color:black;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  .input-box .prefix {
+    font-weight: 300; /* Comment: Sets the font weight of the prefix text */
+    font-size: 14px; /* Comment: Sets the font size of the prefix text */
+    color: black;
+    margin-right:8px;
+  }
+  
+  .input-box input {
+    flex-grow: 1; /* Comment: Allows the input field to grow to fill remaining space */
+    font-size: 14px; /* Comment: Sets the font size of the input text */
+    background:  #fff; /* Comment: Sets the background color of the input field */
+    border: none; /* Comment: Removes the border of the input field */
+    outline: none; /* Comment: Removes the outline when input field is focused */
+    padding: 0.5rem; /* Comment: Adds padding to the input field */
+  }
+  
+  .input-box:focus-within {
+    border-color: #777; /* Comment: Changes the border color when the container or its children are focused */
+  }
+  
+  
+  form button[type='button'] {
+    width: 50%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 600;
+  }
+  .login-center-options-parent{
+    display: flex;
+    justify-content: center;
+    margin-top:16px;
+  }
+  
+  
+  .login-center-options{
+    display: flex;
+    justify-content: space-between;
+    width:60%;
+  }
+  
+  .remember-div{
+    display:flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+  
+  .remember-div label{
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+  
+  .forgot-pass-link{
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  
+  .forgot-pass-link:hover{
+    text-decoration: underline;
+  }
+  
+  .login-center-buttons{
+    margin-top: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  
+  .login-center-buttons button:nth-child(1){
+    background-color: black;
+    color: white;
+    border: 3px solid black;
+  }
+  
+  .login-center-buttons button:nth-child(1):hover{
+    color: #333;
+    background-color: white;
+  }
+  
+  .login-center-buttons button:nth-child(2){
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    color: black;
+  }
+
+ 
+  .login-center-buttons button:nth-child(2) img{
+    width: 30px;
+  }
+  
+  .login-center-buttons button:nth-child(2):hover{
+    background-color: #c4c4c457;
+  }
+  
+  .login-bottom-p{
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 40px;
+  }
+  
+  .login-bottom-p a{
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-bottom-p a:hover{
+    text-decoration: underline;
+  }
+
+  @media(max-width: 900px){
+    .login-left{
+        display: none;
+    }   
+}
+
+@media(max-width: 370px){
+    .login-center-options{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    .login-center-buttons{
+        margin-top: 20px;
+    }
+
+    .login-center h2{
+        font-size: 3rem;
+    }
+
+    .login-center p{
+        font-size: 1.5rem;
+    }
+
+}
