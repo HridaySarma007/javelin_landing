@@ -17,7 +17,8 @@
     "react-icons": "^5.2.1",
     "react-mobile-app-button": "^1.2.18",
     "react-mobile-store-button": "^0.0.6",
-    "react-otp-input": "^3.1.1"
+    "react-otp-input": "^3.1.1",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/node": "^20",
