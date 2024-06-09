@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Architects_Daughter } from "next/font/google";
 import "./css/globals.css";
-
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,8 +31,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}
       >
-        <div className="flex flex-col min-h-screen overflow-hidden">  
-        {children}
+        <div className="flex flex-col min-h-screen overflow-hidden">
+          {children}
+          <Analytics mode={"development"} />;
         </div>
       </body>
     </html>
