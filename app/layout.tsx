@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Architects_Daughter } from "next/font/google";
 import "./css/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,7 +35,8 @@ export default function RootLayout({
       >
         <div className="flex flex-col min-h-screen overflow-hidden">
           {children}
-          <Analytics mode={"development"} />;
+          <Analytics mode={"development"} />
+          <SpeedInsights />
         </div>
       </body>
     </html>
