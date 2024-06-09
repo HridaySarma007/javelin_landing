@@ -1,6 +1,6 @@
 FROM node:alpine AS builder
 WORKDIR /app
-COPY ./package.json ./package-lock ./
+COPY ./package.json ./package-lock.json ./
 RUN npm install
 
 COPY . . 
