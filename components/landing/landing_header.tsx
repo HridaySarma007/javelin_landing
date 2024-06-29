@@ -1,6 +1,7 @@
 import Link from "next/link";
 import MobileMenu from "./mobile-menu";
 import Logo from "../../assets/javelin.png";
+import Image from "next/image";
 
 export default function LandingHeader() {
   return (
@@ -11,10 +12,12 @@ export default function LandingHeader() {
           <div className="shrink-0 mr-4">
             {/* Logo */}
             <Link href="/" className="block" aria-label="Cruip">
-              <img
+              <Image
                 src={Logo.src}
                 className="rounded-full w-12 h-12"
                 alt="Logo"
+                width={32} // Specify the width of the image
+                height={32}
               />
             </Link>
           </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "../../assets/javelin.png";
+import Image from "next/image"; // Ensure this import is at the top of your file
 
 export default function Footer() {
   return (
@@ -14,10 +15,12 @@ export default function Footer() {
               <div className="mb-2">
                 {/* Logo */}
                 <Link href="/" className="inline-block" aria-label="Cruip">
-                  <img
+                  <Image
                     src={Logo.src}
                     className="rounded-full w-12 h-12"
                     alt="Logo"
+                    width={32} // Specify the width of the image
+                    height={32}
                   />
                 </Link>
               </div>

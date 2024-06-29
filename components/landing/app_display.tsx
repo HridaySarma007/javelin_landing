@@ -1,10 +1,11 @@
 import * as React from "react";
 import PlayStoreButton from "../../assets/svg/play_store.svg";
 import AppStoreButton from "../../assets/svg/app_store.svg";
+import Image from "next/image"; // Ensure this import is at the top of your file
 
 interface AppDisplayConfig {
-  title: String;
-  description: String;
+  title: string;
+  description: string;
   icon: string;
 }
 
@@ -26,10 +27,11 @@ export default function AppDisplay(props: AppDisplayConfig) {
               marginBottom: "16px",
             }}
           >
-            <img
+            <Image
               className="app_display_icon"
               src={props.icon}
-              style={{ width: "120px", height: "120px" }}
+              alt={props.title || "App icon"}
+              style={{ width: 120, height: 120 }}
             />
           </div>
 
@@ -52,8 +54,10 @@ export default function AppDisplay(props: AppDisplayConfig) {
             <h4 style={{ marginRight: "16px", color: "tomato" }}>
               Available On{" "}
             </h4>
-            <img src={PlayStoreButton.src} style={{ marginRight: "16px" }} />
-            <img src={AppStoreButton.src} />
+            <Image src={PlayStoreButton.src} alt="Download from Play Store" style={{ marginRight: "16px" }} width={32} // Specify the width of the image
+        height={32} />
+            <Image src={AppStoreButton.src} alt="Download from App Store" width={32} // Specify the width of the image
+        height={32}/>
           </div>
         </div>
       </div>
