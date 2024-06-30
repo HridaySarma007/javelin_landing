@@ -17,7 +17,7 @@ export default function Login() {
   const reqOTP = async () => {
     try {
       const response = await postRequest(api.auth.requestOTP, {
-        phoneNumber: prefix + phoneNumber, // Assuming the API expects the full phone number with prefix
+        phone: prefix + phoneNumber, // Assuming the API expects the full phone number with prefix
       });
       /// Assuming the response is a JSON string that matches the GlobalResponse structure
       const globalResponse = GlobalResponse.fromJson(response);
@@ -33,18 +33,17 @@ export default function Login() {
       }
     } catch (error) {
       // Handle error, e.g., showing an error message to the user
-      console.error("Error requesting OTP:", error);
+      console.error("Error generating OTP:", error);
       setShowOtpField(false); // Optionally reset OTP field visibility on error
     }
   };
 
   function validatePhoneNumber() {
-    console.log("Validating phone number:", phoneNumber);
-    // This pattern is for demonstration and might need to be adjusted to your needs
     // It matches international phone numbers with optional + prefix and digits, allowing spaces or dashes.
     const pattern = /^\+?[0-9]{1,3}?[-. ]?([0-9]{2,3}[-. ]?){2,3}[0-9]$/;
     if (pattern.test(phoneNumber)) {
       reqOTP();
+      console.log("Valid phone number");
     } else {
       console.error("Invalid phone number");
     }

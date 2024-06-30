@@ -34,6 +34,8 @@ export async function getRequest(url: string, params = {}) {
   
   // Generic POST request function
   export async function postRequest(url: string, data = {}) {
+    console.log('POST request data:', data);
+    console.log('POST request url:', url);
     try {
       const response = await axios.post(url, data);
       return response.data;
